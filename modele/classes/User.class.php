@@ -5,15 +5,11 @@ class User
 	private $id = "";
 	private $email = "";
 	private $password = "";
-	private $isBan = "";
-	private $banDate = "";
-	private $isModerator = "";
 	private $isActive = "";
 	private $username = "";
 	private $image = "";
 	private $description = "";
 	private $ferraille = "";
-	private $acier = "";
 	private $prestige = "";
 	
 	//Construteur
@@ -62,22 +58,7 @@ class User
 	{
 		$this->password=$value;
 	}
-	public function getIsBan()
-	{
-		return $this->isBan;
-	}
-	public function setIsBan($value)
-	{
-		$this->IsBan=$value;
-	}
-	function getBanDate() {
-            return $this->banDate;
-        }
-
-        function getIsModerator() {
-            return $this->isModerator;
-        }
-
+        
         function getIsActive() {
             return $this->isActive;
         }
@@ -96,10 +77,6 @@ class User
 
         function getFerraille() {
             return $this->ferraille;
-        }
-
-        function getAcier() {
-            return $this->acier;
         }
 
         function getPrestige() {
@@ -147,16 +124,12 @@ class User
 	{
             $this->id = $ligne["id"];
             $this->email = $ligne["email"];
-            $this->password = $ligne["password"];
-            $this->isBan = $ligne["isBan"];
-            $this->banDate = $ligne["banDate"];
-            $this->isModerator = $ligne["isModerator"];
+            $this->password = $ligne["password"];            
             $this->isActive = $ligne["isActive"];
             $this->username = $ligne["username"];
             $this->image = $ligne["image"];
             $this->description = $ligne["description"];
             $this->ferraille = $ligne["ferraille"];
-            $this->acier = $ligne["acier"];
             $this->prestige = $ligne["prestige"];  
 	}	
 }

@@ -35,15 +35,11 @@ class UserDAO
                     $p->setID($result->id);
                     $p->setEmail($result->email);
                     $p->setPassword($result->password);
-                    $p->setIsBan($result->isBan);
-                    $p->setBanDate($result->banDate);
-                    $p->setIsModerator($result->isModerator);
                     $p->setIsActive($result->isActive);
                     $p->setUsername($result->username);
                     $p->setImage($result->image);
                     $p->setDescription($result->description);
                     $p->setFerraille($result->ferraille);
-                    $p->setAcier($result->acier);
                     $p->setPrestige($result->prestige);
                     $pstmt->closeCursor();
                     $db = Database::close();
