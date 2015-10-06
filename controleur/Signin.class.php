@@ -28,8 +28,7 @@
 			{
 				$_REQUEST["field_messages"]["warning"] = "Votre mot de passe doit contenir 4 charactères minimum.";
 			}*/
-			$udao = new UserDAO();
-			if ($udao->find($_REQUEST["email"]))
+			if (UserDAO::find($_REQUEST["email"]))
 			{
                             $_REQUEST["field_messages"]["error"] = "Vous avez déjà crée un compte à cette adresse!";
                             return "index";
@@ -37,7 +36,7 @@
                         $user = new User();
                         $user->setEmail($_REQUEST["email"]);
                         $user->setPassword($_REQUEST["password"]);
-			if ($udao->create($user))
+			if (UserDAO::create($user))
 			{
                             //Ajouter commandes.
                             $_REQUEST["field_messages"]["success"] = "Votre compte a correctement été créé, vous pouvez maintenant activer votre compte.";

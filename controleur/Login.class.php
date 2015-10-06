@@ -10,8 +10,7 @@
 				$_REQUEST["field_messages"]["warning"] = "Vous n'avez pas entrez votre email.";
 				return "index";
 			}
-			$udao = new UserDAO();
-			$user = $udao->find($_REQUEST["email"]);
+			$user = UserDAO::find($_REQUEST["email"]);
 			/*if ($user->getIsActivate() == 0)
 			{
 				$_REQUEST["field_messages"]["warning"] = "Votre email n'a pas été confirmé.";	
