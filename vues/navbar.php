@@ -18,6 +18,8 @@
                             {
                         ?>
                             <li>
+                                <a href="#" data-toggle="modal" data-target="#register-modal">S'inscrire</a>
+                            </li><li>
                                 <a href="#" data-toggle="modal" data-target="#login-modal">Se connecter</a>
                             </li>
                         <?php
@@ -54,7 +56,7 @@
 				<input type="submit" name="login" class="btn btn-black btn-xl" value="Se connecter">
 			</form>
 			<div class="login-help">
-				<a href="#" data-toggle="modal" data-target="#register-modal" data-dismiss="modal">Register</a> - <a href="#" data-toggle="modal" data-target="#reset-modal" data-dismiss="modal">Forgot Password</a>
+				<a href="#" data-toggle="modal" data-target="#register-modal" data-dismiss="modal">S'inscire</a> - <a href="#" data-toggle="modal" data-target="#reset-modal" data-dismiss="modal">Mot de passe oublié</a>
 			</div>
 		</div>
 	</div>
@@ -73,19 +75,25 @@
 				</div>
 				<input type="submit" name="inscription" class="btn btn-success btn-xl" value="Inscription">
 			</form>
+			<div class="register-help">
+				<a href="#" data-toggle="modal" data-target="#login-modal" data-dismiss="modal">Se connecter</a> - <a href="#" data-toggle="modal" data-target="#reset-modal" data-dismiss="modal">Mot de passe oublié</a>
+			</div>
 		</div>
 	</div>
 </div>
 <div class="modal fade in" id="reset-modal" role="dialog">
 	<div class="modal-dialog">
 		<div class="loginmodal-container">
-			<h1>Entrez votre adresse courriel pour </h1><br>
+			<h1>Entrez votre adresse courriel pour récupérer votre mot de passe</h1><br>
 			<form action="?action=passwordForgot" method="POST" class="form-signin" role="form">
 				<div class="form-group">
 					<input type="email" name="email" placeholder="Email" required autofocus>
 				</div>
 				<input type="submit" name="login" class="btn btn-black btn-xl" value="Envoyer">
 			</form>
+			<div class="register-help">
+				<a href="#" data-toggle="modal" data-target="#register-modal" data-dismiss="modal">S'inscire</a> - <a href="#" data-toggle="modal" data-target="#login-modal" data-dismiss="modal">Se connecter</a>
+			</div>
 		</div>
 	</div>
 </div>
